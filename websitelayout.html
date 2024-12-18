@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Website Layout</title>
+    <style>
+        *{
+        box-sizing: border-box;
+        }
+        body {
+        margin: 0;
+        }
+        
+        .header {
+        background-color: #f1f1f1;
+        padding: 20px;
+        text-align: center;
+        }
+        .topnav {
+        overflow: hidden;
+        background-color: #333;
+        }
+        .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+        .topnav a:hover{
+        background-color: #ddd;
+        color: black;
+        }
+        .column {
+        float: left;
+        padding: 10px;
+        }
+        .column.side {
+        width: 25%;
+        }
+        .column.middle {
+        width: 50%;
+        }
+        .row::after {
+        content: "";
+        display: table;
+        clear: both; 
+        }
+        @media screen and (max-width: 600px) {
+        .column.side, .column.middle {
+        width: 100%;
+        }
+            
+        }
+        .footer {
+        background-color: #f1f1f1;
+        padding: 10px;
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Teori Relativitas</h1>
+        <p>Teori gravitasi fisika modern.</p>
+    </div>
+
+    <nav class="topnav">
+        <a href="#">Relativitas Umum</a>
+        <a href="#">Relativitas Khusus</a>
+        <a href="#">Gravitasi</a>
+        <a href="#">Black Hole</a>
+    </nav>
+
+    <div class="row">
+        <div class="column side">
+            <h2>Penemu</h2>
+            <p>Teori ini dikemukakan oleh Albert Einstein</p>
+    </div>
+
+    <div class="column middle">
+        <h2>Teori Relativitas</h2>
+        <p>Teori relativitas adalah teori yang membahas mengenai 
+            kecepatan dan percepatan yang diukur secara berbeda 
+            melalui kerangka acuan. Konsep dasar dari teori relativitas 
+            disusun oleh Albert Einstein menjadi dua jenis, yaitu teori 
+            relativitas khusus dan teori relativitas umum.[1] Kedua teori 
+            ini diciptakan untuk menjelaskan bahwa gelombang elektromagnetik 
+            tidak sesuai dengan teori gerakan Newton. Gelombang elektromagnetik 
+            dibuktikan bergerak pada kecepatan yang konstan, tanpa dipengaruhi gerakan 
+            sang pengamat. Inti pemikiran dari kedua teori ini adalah bahwa dua pengamat 
+            yang bergerak relatif terhadap masing-masing akan mendapatkan waktu dan interval 
+            ruang yang berbeda untuk kejadian yang sama, tetapi isi hukum fisika akan terlihat sama oleh keduanya.</p>
+    </div>
+
+    <div class="column side">
+        <h2>Tujuan</h2>
+        <p>Teori ini menyempurnakan teori gravitasi yang dikemukakan oleh Sir Isaac Newton</p>
+    </div>
+</div>
+    <div class="footer">
+        <p>Sumber: <a href="https://www.wikipedia.org/" target="_blank">Wikipedia</a></p>
+    </div>
+        
+</body>
+</html>
